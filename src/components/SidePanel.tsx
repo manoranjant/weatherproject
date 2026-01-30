@@ -38,7 +38,9 @@ const SidePanel = (props: Props) => {
 function AirPollution({ coords }: Props) {
   const { data } = useSuspenseQuery({
     queryKey: ["pollution", coords],
-    queryFn: () => getAirPollution(coords),
+    queryFn: () =>
+      getAirPollution(),
+      // coords
   });
 
   return (

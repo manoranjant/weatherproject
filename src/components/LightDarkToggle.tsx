@@ -1,4 +1,3 @@
-import React from "react";
 import Sun from "/src/assets/sun-svgrepo-com.svg?react";
 import Moon from "/src/assets/moon-svgrepo-com.svg?react";
 import { Switch } from "./ui/switch";

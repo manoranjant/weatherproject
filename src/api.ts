@@ -2,8 +2,6 @@ import { AirPollutionSchema } from "./schemas/airPollutionSchema";
 import { geocodeSchema } from "./schemas/geocodeSchema";
 import { WeatherResponseSchema } from "./schemas/weatherSchemas";
 
-const API_KEY = import.meta.env.VITE_API_KEY;
-
 const mockData = {
   lat: 33.44,
   lon: -94.04,
@@ -457,33 +455,39 @@ const mockAirPollutionData = {
     },
   ],
 };
-export const getWeather = async ({
-  lat,
-  lon,
-}: {
-  lat: number;
-  lon: number;
-}) => {
-  //   const res = await fetch(
-  //     `https://api.openweathermap.org/data/3.0/onecall?lat=${lat}&lon=${lon}&appid=${API_KEY}`
-  //   );
-  //   const data = await res.json();
-  WeatherResponseSchema.parse(mockData);
-  return mockData;
-};
+export const getWeather = async () =>
+  //   {
+  //   lat,
+  //   lon,
+  // }: {
+  //   lat: number;
+  //   lon: number;
+  // }
+  {
+    //   const res = await fetch(
+    //     `https://api.openweathermap.org/data/3.0/onecall?lat=${lat}&lon=${lon}&appid=${API_KEY}`
+    //   );
+    //   const data = await res.json();
+    WeatherResponseSchema.parse(mockData);
+    return mockData;
+  };
 
-export const getGeocode = async (location: string) => {
-  geocodeSchema.parse(mockGeocodeData);
-  return mockGeocodeData;
-};
+export const getGeocode = async () =>
+  // location: string
+  {
+    geocodeSchema.parse(mockGeocodeData);
+    return mockGeocodeData;
+  };
 
-export const getAirPollution = async ({
-  lat,
-  lon,
-}: {
-  lat: number;
-  lon: number;
-}) => {
-  AirPollutionSchema.parse(mockAirPollutionData);
-  return mockAirPollutionData;
-};
+export const getAirPollution = async () =>
+  //   {
+  //   lat,
+  //   lon,
+  // }: {
+  //   lat: number;
+  //   lon: number;
+  // }
+  {
+    AirPollutionSchema.parse(mockAirPollutionData);
+    return mockAirPollutionData;
+  };

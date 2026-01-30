@@ -12,7 +12,9 @@ type Props = {
 const AdditionalInfo = ({ coords }: Props) => {
   const { data } = useSuspenseQuery({
     queryKey: ["weather", coords],
-    queryFn: () => getWeather({ lat: coords.lat, lon: coords.lon }),
+    queryFn: () =>
+      getWeather(),
+      // { lat: coords.lat, lon: coords.lon }
   });
 
   return (
