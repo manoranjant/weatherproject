@@ -7,7 +7,7 @@ import { Slider } from "./ui/slider";
 import clsx from "clsx";
 import { Tooltip, TooltipContent } from "./ui/tooltip";
 import { TooltipTrigger } from "@radix-ui/react-tooltip";
-import Information from "/src/assets/Information.svg?react";
+import Information from "/src/assets/information.svg?react";
 import Chevron from "/src/assets/chevron-left.svg?react";
 import SidePanelSkeleton from "./skeletons/SidePanelSkeleton";
 
@@ -38,9 +38,8 @@ const SidePanel = (props: Props) => {
 function AirPollution({ coords }: Props) {
   const { data } = useSuspenseQuery({
     queryKey: ["pollution", coords],
-    queryFn: () =>
-      getAirPollution(),
-      // coords
+    queryFn: () => getAirPollution(),
+    // coords
   });
 
   return (
