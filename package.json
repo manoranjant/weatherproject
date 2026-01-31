@@ -5,10 +5,10 @@
   "type": "module",
   "homepage": "https://manoranjant.github.io/weather-project/",
   "scripts": {
-     "test": "echo \"No tests yet\"",
-    "deploy": "gh-pages -d dist",
+    "test": "echo \"No tests yet\"",
+    "deploy": "gh-pages -d build",
     "dev": "vite",
-    "build": "tsc -b && vite dist",
+    "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview"
   },
