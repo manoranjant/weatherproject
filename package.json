@@ -1,9 +1,9 @@
 {
-  "name": "weather-project",
+  "name": "weatherproject",
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://manoranjant.github.io/weather-project/",
+  "homepage": "https://manoranjant.github.io/weatherproject/",
   "scripts": {
     "test": "echo \"No tests yet\"",
     "deploy": "gh-pages -d dist",
